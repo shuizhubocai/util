@@ -1,7 +1,8 @@
 /**
- * Created by 水煮菠菜 on 2017/4/12.
- * javascript常用功能函数
- * https://github.com/shuizhubocai
+ * util javascript常用功能函数
+ * Author : 水煮菠菜 949395345@qq.com
+ * Url : https://github.com/shuizhubocai
+ * Date : 2017-4-12
  */
 
 (function (root, factory) {
@@ -151,6 +152,37 @@
             return eles;
         },
         /**
+         * getCSS 获取元素css样式值
+         * @param ele
+         * @param attr
+         * @returns string
+         */
+        getCSS: function(ele, attr) {
+            var ele = this.getEleById(ele),
+                attr = attr.toLowerCase(),
+                result;
+            if (window.getComputedStyle) {
+                result = window.getComputedStyle(ele, null)[attr];
+            } else {
+                result = ele.currentStyle[attr];
+            }
+            return result;
+        },
+        /**
+         * getQueryString 查询指定url键值
+         * @param name
+         * @returns string or null
+         */
+        getQueryString: function (name) {
+            let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", 'i');
+            let result = this.getNode.win.location.search.substr(1).match(reg);
+            if (result != null) {
+                return decodeURIComponent(result[2]);
+            } else {
+                return null;
+            }
+        },
+        /**
          * bind 更改函数this指向
          * @param ele
          * @param fn
@@ -162,7 +194,7 @@
             if (fn.bind) {
                 result = fn.bind(ele);
             } else {
-                result = function () {
+                result = function (event) {
                     fn.apply(ele, _this.toArray(arguments).slice(1));
                 }
             }
@@ -175,10 +207,13 @@
          * @param fn
          */
         addEvent: function (ele, type, fn) {
-            if (window.addEventListener) {
+            if (ele.addEventListener) {
                 ele.addEventListener(type, fn, false);
-            } else if (window.attachEvent) {
-                ele.attachEvent('on' + type, this.bind(ele, fn));
+            } else if (ele.attachEvent) {
+                ele[type + fn] = function() {
+                    fn.call(ele, window.event);
+                }
+                ele.attachEvent('on' + type, ele[type + fn]);
             }
         },
         /**
@@ -191,7 +226,8 @@
             if (ele.removeEventListener) {
                 ele.removeEventListener(type, fn, false);
             } else if (ele.detachEvent) {
-                ele.detachEvent('on' + type, fn);
+                ele.detachEvent('on' + type, ele[type + fn]);
+                ele[type + fn] = null;
             }
         },
         /**
