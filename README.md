@@ -1,4 +1,4 @@
-# util javascript常用函数库
+# javascript常用函数库
 
 - hasDoctype 判断是否有doctype
 
