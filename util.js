@@ -174,8 +174,8 @@
          * @returns string or null
          */
         getQueryString: function (name) {
-            let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", 'i');
-            let result = this.getNode.win.location.search.substr(1).match(reg);
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", 'i');
+            var result = this.getNode.win.location.search.substr(1).match(reg);
             if (result != null) {
                 return decodeURIComponent(result[2]);
             } else {
@@ -283,19 +283,27 @@
          * @param obj
          * @returns Object
          */
-        deepClone: function (obj) {
+        deepClone: function deepclonefn(obj) {
             var result = obj.constructor === Array ? [] : obj.constructor === Object ? {} : obj,
                 key;
             for (key in obj) {
                 if (obj.hasOwnProperty(key)) {
                     if (obj[key].constructor === Array || obj[key].constructor === Object) {
-                        result[key] = arguments.callee(obj[key]);
+                        result[key] = deepclonefn(obj[key]);
                     } else {
                         result[key] = obj[key];
                     }
                 }
             }
             return result;
+        },
+      /**
+       * typeName判断数据类型
+       * @param val
+       * @returns {string}
+       */
+        typeName: function(val) {
+            return Object.prototype.toString.call(val).slice(8, -1).toLowerCase();
         },
         /**
          * extend 合并对象
