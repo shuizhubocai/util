@@ -20,4 +20,5 @@
 - typeName 数据类型判断
 - extend 合并对象
 - fastGetPicInfo 快速获取图片宽高
+- curry 函数柯里化
 
