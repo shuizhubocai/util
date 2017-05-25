@@ -19,6 +19,6 @@
 - deepClone 深度克隆对象
 - typeName 数据类型判断
 - extend 合并对象
-- fastGetPicInfo 快速获取图片宽高
+- getPicInfo 快速获取图片宽高，图片加载完回调
 - curry 函数柯里化
 
