@@ -1,6 +1,6 @@
 # javascript常用函数库
 
-- hasDoctype 判断是否有doctype
+- hasDoctype 判断是否有doctype元素
 - getEleById 通过id获取dom
 - getContentInfo 获取内容高度，默认是window，html中没有doctype标签会导致结果不正确
 - getViewInfo 获取可视宽高，默认是window，html中没有doctype标签会导致结果不正确
