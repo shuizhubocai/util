@@ -386,6 +386,37 @@
                 _args = _args.concat(Array.prototype.slice.call(arguments))
                 return callback
             }
+        },
+        /**
+         * mouseWheelAddEvent 为鼠标滚轮事件设置方法
+         * @param ele
+         * @param fn
+         */
+        mouseWheelAddEvent: function (ele, fn) {
+            //firefox和标准浏览器
+            if (ele.addEventListener) {
+                ele.addEventListener('onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel', fn, false)
+            } else {
+                //ie和标准浏览器
+                ele.onmousewheel = fn
+            }
+        },
+        /**
+         * getMouseWheelDirection 获取鼠标滚轮方向
+         * @param e 事件对象
+         * @return number 正表示上或者左滚动，负表示下或者右滚动
+         */
+        getMouseWheelDirection: function (e) {
+            e = e || window.event
+            var delta = 0
+            if (e.wheelDelta) {
+                console.log('wheelDelta')
+                delta = e.wheelDelta / 120
+            } else if (e.deltaY) {
+                console.log('deltaY')
+                delta = -(e.deltaY / 3)
+            }
+            return delta
         }
     }
 })
