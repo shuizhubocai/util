@@ -21,5 +21,5 @@
 - extend 合并对象
 - getPicInfo 快速获取图片宽高，图片加载完回调
 - curry 函数柯里化
-- mouseWheelAddEvent 为鼠标滚轮事件设置方法
+- mouseWheelAddEvent 鼠标滚轮事件设置方法
 - getMouseWheelDirection 获取鼠标滚轮方向
