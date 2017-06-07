@@ -410,10 +410,8 @@
             e = e || window.event
             var delta = 0
             if (e.wheelDelta) {
-                console.log('wheelDelta')
                 delta = e.wheelDelta / 120
             } else if (e.deltaY) {
-                console.log('deltaY')
                 delta = -(e.deltaY / 3)
             }
             return delta
