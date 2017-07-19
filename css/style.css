@@ -31,7 +31,7 @@ input[type=text],input[type=password],input[type=button]{-webkit-appearance: non
 .gn{width:5.82rem; height:7rem; margin:0 auto;padding:.42rem 0 .3rem; overflow: visible; position:relative;}
 .gn .bor{width:4.05rem; height:4.66rem; margin:1rem auto 0;background:url(../img/gn-bg.png) center top no-repeat; background-size:100% 100%; overflow: hidden; text-indent:-99rem; }
 .gn .gn-ico{display:block; position:absolute; width:1.78rem; height:2.16rem; padding:.04rem 0 0; transition: all .3s; -wekbit-transition: all .3s; overflow: hidden; }
-.gn .gn-ico img{ transition: all .3s; -wekbit-transition: all .3s; margin:0 auto; width:1.78rem; height:1.6rem;}
+.gn .gn-ico:link img,.gn .gn-ico:visited img,.gn .gn-ico:hover img,.gn .gn-ico:active img{ transition: all .3s; -wekbit-transition: all .3s; margin:0 auto; width:1.78rem; height:1.6rem;transform: scale(1);-webkit-transform:scale(1)}
 .gn .gn-01{ left:50%; top:.4rem;margin-left:-0.89rem;}
 .gn .gn-02{ left:0; top:1.4rem}
 .gn .gn-03{ left:0; top:3.8rem}
@@ -42,7 +42,7 @@ input[type=text],input[type=password],input[type=button]{-webkit-appearance: non
 .gn .gn-ico span{display: block;font-size:.32rem; line-height:.48rem; color:#fff; text-align: center; padding-top:.05rem}
 .gn .gn-02 span{ text-align: left; box-sizing: border-box; padding-left:.17rem;}
 .gn .gn-05 span{ text-align: right;box-sizing: border-box; padding-right:.17rem;}
-.gn .gn-ico:active img,.gn .gn-ico:focus img{transform: scale(0.8);-webkit-transform:scale(0.8)}
+.gn .gn-ico:hover img,.gn .gn-ico:active img{transform: scale(0.8);-webkit-transform:scale(0.8)}
 .gn .gn-tit:active img,.gn .gn-tit:focus img{transform: scale(0.8);-webkit-transform:scale(0.8)}
 .banner{width:6.4rem; margin:0 auto; background:#e7ecef; border-bottom: .13rem solid #fff;}
 .banner img{width:100%;}
