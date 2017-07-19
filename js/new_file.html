@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="{CHARSET}">
+		<title></title>
+	</head>
+	<body>
+		<style>
+			html,body{-webkit-tap-highlight-color:transparent; font-size:1rem;}
+			a:active {border:1px solid red; -webkit-tap-highlight-color:transparent}
+		</style>
+		<a>123</a>
+		<script>
+		document.body.addEventListener('touchstart', function () { });
+		</script>
+		
+		
+		<style type="text/css">
+#div1{ width:600px; height:400px; margin:50px auto; position:relative; text-align: center; padding-left:50px;} 
+#div1 img{ position:absolute; left:0; top:0; margin: 0 auto;} 
+</style> 
+<div id="div1"> 
+<img src="images/1.jpg" width="100px" height="80px"> 
+</div> 
+<script type="text/javascript" src="jquery-1.11.1.min.js"></script> 
+<script type="text/javascript"> 
+//$(function(){ 
+//$('#div1 img').mouseenter(function(){ 
+//var wValue=1.5 * $(this).width(); 
+//var hValue=1.5 * $(this).height(); 
+//$(this).animate({width: wValue, 
+//	height: hValue, 
+//	left:("-"+(0.5 * $(this).width())/2), 
+//	top:("-"+(0.5 * $(this).height())/2)}, 1000); 
+//}).mouseleave(function(){ 
+//$(this).animate({width: "100", 
+//	height: "80", 
+//	left:"0px", 
+//	top:"0px"}, 1000 ); 
+//}); 
+//}); 
+$(function(){ 
+$('#div1 img').mouseenter(function(){ 
+var wValue=0.8 * $(this).width(); 
+var hValue=0.8 * $(this).height(); 
+$(this).animate({width: wValue, 
+	height: hValue, 
+	left:(""+(0.2 * $(this).width())/2), 
+	top:(""+(0.2 * $(this).height())/2)}, 1000); 
+}).mouseleave(function(){ 
+$(this).animate({width: "100", 
+	height: "80", 
+	left:"0px", 
+	top:"0px"}, 1000 ); 
+}); 
+}); 
+</script>
+
+
+<script type="text/javascript"> 
+document.body.addEventListener('touchstart', function(e){
+ var target = e.target
+ if(target.dataset.touch === 'true'){
+  target.classList.add('active')
+ }
+ })
+ document.body.addEventListener('touchmove', function(e){
+ var target = e.target,
+  rect = target.getBoundingClientRect()
+ if(target.dataset.touch === 'true'){
+  // 移出元素时，取消active状态
+  if(e.changedTouches[0].pageX<rect.left || e.changedTouches[0].pageX>rect.right || e.changedTouches[0].pageY<rect.top || e.changedTouches[0].pageY>rect.bottom){
+  target.classList.remove('active')
+  }
+ }
+ })
+ document.body.addEventListener('touchcancel', function(e){
+ var target = e.target
+ if(target.dataset.touch === 'true'){
+  target.classList.remove('active')
+ }
+ })
+ document.body.addEventListener('touchend', function(e){
+ var target = e.target
+ if(target.dataset.touch === 'true'){
+  target.classList.remove('active')
+ }
+ })
+</script>
+
+
+
+
+
+		
+	</body>
+</html>
