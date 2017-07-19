@@ -30,7 +30,7 @@ input[type=text],input[type=password],input[type=button]{-webkit-appearance: non
 
 .gn{width:5.82rem; height:7rem; margin:0 auto;padding:.42rem 0 .3rem; overflow: visible; position:relative;}
 .gn .bor{width:4.05rem; height:4.66rem; margin:1rem auto 0;background:url(../img/gn-bg.png) center top no-repeat; background-size:100% 100%; overflow: hidden; text-indent:-99rem; }
-.gn .gn-ico{display:block; position:absolute; width:1.78rem; height:2.16rem; padding:.04rem 0 0; transition: all .3s; -wekbit-transition: all .3s; overflow: hidden; }
+.gn .gn-ico{display:block; position:absolute; width:1.78rem; height:2.16rem; padding:.04rem 0 0; overflow: hidden; }
 .gn .gn-ico:link img,.gn .gn-ico:visited img,.gn .gn-ico:hover img,.gn .gn-ico:active img{ transition: all .3s; -wekbit-transition: all .3s; margin:0 auto; width:1.78rem; height:1.6rem;transform: scale(1);-webkit-transform:scale(1);border:1px solid red;}
 .gn .gn-01{ left:50%; top:.4rem;margin-left:-0.89rem;}
 .gn .gn-02{ left:0; top:1.4rem}
