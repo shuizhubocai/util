@@ -31,7 +31,7 @@ input[type=text],input[type=password],input[type=button]{-webkit-appearance: non
 .gn{width:5.82rem; height:7rem; margin:0 auto;padding:.42rem 0 .3rem; overflow: visible; position:relative;}
 .gn .bor{width:4.05rem; height:4.66rem; margin:1rem auto 0;background:url(../img/gn-bg.png) center top no-repeat; background-size:100% 100%; overflow: hidden; text-indent:-99rem; }
 .gn .gn-ico{display:block; position:absolute; width:1.78rem; height:2.16rem; padding:.04rem 0 0; overflow: hidden; }
-.gn .gn-ico:link img,.gn .gn-ico:visited img,.gn .gn-ico:hover img,.gn .gn-ico:active img{ transition: all .3s; -wekbit-transition: all .3s; margin:0 auto; width:1.78rem; height:1.6rem;transform: scale(1);-webkit-transform:scale(1);border:1px solid red;}
+.gn .gn-ico:link img,.gn .gn-ico:visited img,.gn .gn-ico:hover img,.gn .gn-ico:active img{ transition: all .3s; -wekbit-transition: all .3s; margin:0 auto; width:1.78rem; height:1.6rem;transform: scale(1);-webkit-transform:scale(1);}
 .gn .gn-01{ left:50%; top:.4rem;margin-left:-0.89rem;}
 .gn .gn-02{ left:0; top:1.4rem}
 .gn .gn-03{ left:0; top:3.8rem}
@@ -43,7 +43,7 @@ input[type=text],input[type=password],input[type=button]{-webkit-appearance: non
 .gn .gn-02 span{ text-align: left; box-sizing: border-box; padding-left:.17rem;}
 .gn .gn-05 span{ text-align: right;box-sizing: border-box; padding-right:.17rem;}
 .gn .gn-ico:hover img,.gn .gn-ico:active img{transform: scale(0.8);-webkit-transform:scale(0.8)}
-.gn .gn-tit:active img,.gn .gn-tit:focus img{transform: scale(0.8);-webkit-transform:scale(0.8)}
+.gn .gn-tit:hover img，.gn .gn-tit:active img{transform: scale(0.8);-webkit-transform:scale(0.8)}
 .banner{width:6.4rem; margin:0 auto; background:#e7ecef; border-bottom: .13rem solid #fff;}
 .banner img{width:100%;}
 
@@ -101,9 +101,9 @@ input[type=text],input[type=password],input[type=button]{-webkit-appearance: non
 /*.sub-sty .sty a{float:left; margin:0 .22rem .1rem 0;width:1.8rem; height:2.52rem;overflow: hidden; }*/
 .sub-sty .sty span{display:block; font-size:.32rem; text-align: center; width: 100%; line-height: .52rem; color:#fff;}
 .sub-sty .sty .spic{display: block;width:1.82rem; height:1.92rem; overflow: hidden; position: relative;}
-.sub-sty .sty a:link,.sub-sty .sty a:visited,.sub-sty .sty a:hover,.sub-sty .sty a:active{float:left; margin:0 .22rem .1rem 0;width:1.8rem; height:2.52rem;overflow: hidden;} 
-.sub-sty .sty a img{transform: scale(1);-webkit-transform:scale(1)}
-.sub-sty .sty a:active img,.sub-sty .sty a:focus img{transform: scale(0.8);-webkit-transform:scale(0.8) }
+.sub-sty .sty a:link,.sub-sty .sty a:visited,.sub-sty .sty a:hover,.sub-sty .sty a:active{float:left; margin:0 .22rem .1rem 0;width:1.8rem; height:2.52rem;overflow: hidden;}
+.sub-sty .sty a:link img,.sub-sty .sty a:visited img,.sub-sty .sty a:hover img,.sub-sty .sty a:active img{transform: scale(1);-webkit-transform:scale(1)}
+.sub-sty .sty a:hover img,.sub-sty .sty a:active img{transform: scale(0.8);-webkit-transform:scale(0.8) }
 /*.sub-sty .sty a:active img{position:absolute; width:.976rem; height:1.576rem; left:0.0976rem; top:0.1531rem;}
 */
 
