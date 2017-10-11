@@ -17022,7 +17022,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }) : _c('div', {
     staticClass: "connectus-box",
-    class: [_vm.isShowPop ? 'connectus-box-active' : '']
+    class: {
+      'connectus-box-active': _vm.isShowPop
+    }
   }, [_c('div', {
     staticClass: "connectus-main"
   }, [_c('span', {
