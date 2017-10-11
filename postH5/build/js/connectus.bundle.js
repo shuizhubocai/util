@@ -16839,7 +16839,7 @@ exports.default = {
         },
         showPop: function showPop() {
             this.isShowPop = true;
-            alert(2);
+            alert(3);
         },
         sendMsg: function sendMsg() {
             if (this.$refs.name.value == '') {
@@ -17022,7 +17022,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }) : _c('div', {
     staticClass: "connectus-box",
-    class: _vm.isShowPop ? 'connectus-box-active' : ''
+    class: [_vm.isShowPop ? 'connectus-box-active' : '']
   }, [_c('div', {
     staticClass: "connectus-main"
   }, [_c('span', {
