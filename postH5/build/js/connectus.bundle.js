@@ -16839,7 +16839,7 @@ exports.default = {
         },
         showPop: function showPop() {
             this.isShowPop = true;
-            alert(3);
+            alert(4);
         },
         sendMsg: function sendMsg() {
             if (this.$refs.name.value == '') {
