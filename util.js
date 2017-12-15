@@ -1,6 +1,6 @@
 /**
  * util javascript常用功能函数
- * Author : 水煮菠菜 949395345@qq.com
+ * Author : 水煮菠菜 shuizhubocai@gmail.com
  * Url : https://github.com/shuizhubocai
  * Date : 2017-4-12
  */
@@ -415,6 +415,18 @@
                 delta = -(e.deltaY / 3)
             }
             return delta
+        },
+        /**
+         * resetFunction 重写原来函数，添加新功能
+         * @param originFunction 原来函数
+         * @param newFunction 新功能
+         * @returns {Function} 新函数
+         */
+        resetFunction: function(originFunction, newFunction) {
+            return function() {
+                newFunction()
+                originFunction()
+            }
         }
     }
 })

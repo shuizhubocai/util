@@ -23,3 +23,4 @@
 - curry 函数柯里化
 - mouseWheelAddEvent 鼠标滚轮事件设置方法
 - getMouseWheelDirection 获取鼠标滚轮方向
+- resetFunction 重写原来函数，添加新功能
