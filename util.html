@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>测试</title>
+    <script src="util.js"></script>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+        }
+    </style>
+</head>
+<body>
+</iframe>
+<script>
+    console.log(lang.getType({}));
+    console.log(lang.isArray([]));
+    console.log(lang.isDate(new Date()));
+    console.log(lang.toArray(document.getElementsByTagName('meta')));
+    console.log(lang.extend({a: '1'}, {b: '2', c: '3'}));
+    console.log(lang.deepClone([{a: '123'}]));
+    console.log(url.getQuery('https://www.domain.com/?aaaa=11111&bbb=22222&ccc=33333', 'aaaa'));
+    console.log(url.format({"b": "bbb", "a": ["1 1", "&2", "=3", "?4", "5"]}));
+    console.log(JSON.stringify(url.parse('a=5&a=%3F4&a=%3D3&a=%262&a=1%201&b=bbb')));
+    console.log(string.escapeHTML('<a href="http://www.domain.com/?a=3&b=3&test=3">test</a>'));
+    console.log(string.unescapeHTML('&lt;a href=&quot;http://www.domain.com/?a=3&amp;b=3&quot;&gt;test&lt;/a&gt;'));
+    console.log(string.escapeRegExp('^      $      ?      .      *      +      |      (      )      {      }      [      ]'));
+    console.log(string.escapeJs('alert(123)'));
+    console.log(string.escapeJs('alert(123)', 8));
+    console.log(string.escapeString('<>"\'&/\\`'));
+    console.log(string.escapeString('<>"\'&/\\`', 16));
+    console.log(string.simpleTemplate('我的名字叫{{  name  }}，我今年{{ age }}岁，我的性别是{{sex}}。', {name: '张三', age: 20, sex: '男'}));
+    console.log(string.formatHexToRgb('#000', 0.3));
+    console.log(string.formatHexToRgb('#000'));
+    console.log(string.formatRgbToHex('rgb(255,255,255)'));
+    console.log(string.formatRgbToHex('rgba(0,0,0,0.3)'));
+    console.log(string.getByteLength('测试123'));
+    console.log(string.subBytes('测123试', 6, '...'));
+    console.log(string.toCamelCase('page-content-box'));
+    console.log(string.toDBC('＄（ａｂｃ）　－　＃［１２３］'));
+    console.log(string.toSBC('$(abc) - #[123]'));
+    console.log(string.trim('　 测试123　 '));
+    console.log(string.guid());
+    console.log(number.padStartZero('123', 10));
+    console.log(number.toFixed(1.335, 2));
+    console.log(number.formatFileSize(1024652));
+    console.log(date.parse('1970-01-01'));
+    console.log(date.format(+new Date(), 'yyyy-MM-dd hh:mm:ss 周W'));
+    console.log(date.toTime(123123123));
+    console.log(date.toMilliseconds(3.2));
+    console.log(cookie.set('a()', '1()', {path: '/', domain: 'localhost'}));
+    console.log(cookie.get('a()'));
+    console.log(cookie.remove('a()'));
+</script>
+</body>
+</html>
